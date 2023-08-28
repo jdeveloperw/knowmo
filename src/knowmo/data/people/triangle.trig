@@ -1,0 +1,39 @@
+# This document encodes one graph.
+@prefix ex: <http://www.example.org/vocabulary#> .
+@prefix : <http://www.example.org/exampleDocument#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema> .
+
+:G1 {
+    :Sean
+        a ex:Person ;
+        ex:firstName "Sean" ;
+        ex:belt [
+            ex:rank "white" ;
+            ex:knowledgeDate "2023-08-28T00:00:00-05:00"^^xsd:dateTime
+        ] ;
+    .
+}
+
+# Sean
+# Joseph
+# Justin purple
+# Bryan
+# Owen blue
+# Jacob
+# Brandon
+# Chrissy
+# Foster
+# Jay white 2 stripes 
+# Levi white
+# Garreth
+# Chris white
+# Elijah white 3 stripes
+# Nathaniel white
+# Chris white
+# Garreth white one stripe
+# Attie white one stripe
+# Jarret white 1 stripe
+# Ashton white
+# John white
+# Steve white
+# Laurence white
