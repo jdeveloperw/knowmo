@@ -1,15 +1,15 @@
 # This document encodes one graph.
 @prefix ex: <http://www.example.org/vocabulary#> .
-@prefix : <http://www.example.org/places/triangle#> .
+@prefix : <http://www.example.org/places/crag#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema> .
 
 :G1 {
     :Sean
         a ex:Person ;
-        ex:firstName "Sean" ;
-        ex:belt [
+        ex:firstName "Greg" ;
+        ex:attributes [
             ex:rank "white" ;
-            ex:knowledgeDate "2023-08-28T00:00:00-05:00"^^xsd:dateTime
+            ex:metAt "2023-08-28T19:00:00-05:00"^^xsd:dateTime ;
         ] ;
     .
 }
