@@ -1,39 +1,25 @@
 # This document encodes one graph.
-@prefix ex: <http://www.example.org/vocabulary#> .
-@prefix : <http://www.example.org/places/crag#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema> .
+@prefix ex: <http://www.example.org/vocabulary#> .
+@prefix jd: <http://www.example.org/jd#> .
+@prefix : <http://www.example.org/places/crag#> .
 
 :G1 {
-    :Sean
-        a ex:Person ;
-        ex:firstName "Greg" ;
-        ex:attributes [
-            ex:rank "white" ;
-            ex:metAt "2023-08-28T19:00:00-05:00"^^xsd:dateTime ;
-        ] ;
-    .
-}
+    :TheCragFranklin
+        a ex:Location ;
+        foaf:member :Greg ;
+        .
 
-# Sean
-# Joseph
-# Justin purple
-# Bryan
-# Owen blue
-# Jacob
-# Brandon
-# Chrissy
-# Foster
-# Jay white 2 stripes 
-# Levi white
-# Garreth
-# Chris white
-# Elijah white 3 stripes
-# Nathaniel white
-# Chris white
-# Garreth white one stripe
-# Attie white one stripe
-# Jarret white 1 stripe
-# Ashton white
-# John white
-# Steve white
-# Laurence white
+    :Greg
+        a foaf:Person ;
+        foaf:firstName "Greg" ;
+        ex:metOn "2023-08-28T19:00:00-05:00"^^xsd:dateTime ;
+        ex:metAt :TheCragFranklin ;
+        ex:attributes [
+            ex:hasBeard "bold" ;
+        ] ;
+        .
+
+    jd:JD foaf:knows :Greg .
+}

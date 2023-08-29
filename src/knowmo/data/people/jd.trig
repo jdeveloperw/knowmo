@@ -1,0 +1,11 @@
+# This document encodes one graph.
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema> .
+@prefix ex: <http://www.example.org/vocabulary#> .
+@prefix : <http://www.example.org/jd#> .
+
+:G1 {
+    :JD
+        a foaf:Person ;
+        .
+}

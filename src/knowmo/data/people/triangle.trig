@@ -1,17 +1,27 @@
 # This document encodes one graph.
-@prefix ex: <http://www.example.org/vocabulary#> .
-@prefix : <http://www.example.org/places/triangle#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema> .
+@prefix ex: <http://www.example.org/vocabulary#> .
+@prefix jd: <http://www.example.org/jd#> .
+@prefix : <http://www.example.org/places/triangle#> .
 
 :G1 {
+    :TriangleJiuJitsuAcademy
+        a ex:Location ;
+        foaf:member :Sean ;
+        .
+
     :Sean
-        a ex:Person ;
-        ex:firstName "Sean" ;
+        a foaf:Person ;
+        foaf:firstName "Sean" ;
+        ex:studentAt :TriangleJiuJitsuAcademy ;
         ex:belt [
             ex:rank "white" ;
             ex:knowledgeDate "2023-08-28T00:00:00-05:00"^^xsd:dateTime
         ] ;
-    .
+        .
+
+    jd:JD foaf:knows :Sean .
 }
 
 # Sean
