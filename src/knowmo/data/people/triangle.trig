@@ -21,7 +21,44 @@
         ] ;
         .
 
+    :Joe
+        a foaf:Person ;
+        foaf:firstName "Joe" ;
+        ex:studentAt [
+            ex:gym :TriangleJiuJitsuAcademy ;  
+            ex:firstClass "2023-10-03T19:00:00-05:00"^^xsd:dateTime
+        ] ;
+        ex:belt [
+            ex:rank "white" ;
+            ex:knowledgeDate "2023-08-28T00:00:00-05:00"^^xsd:dateTime
+        ] ;
+        .
+
+    :Kyle
+        a foaf:Person ;
+        foaf:firstName "Kyle" ;
+        ex:studentAt [
+            ex:gym :TriangleJiuJitsuAcademy ;  
+            ex:firstClass "2023-10-03T19:00:00-05:00"^^xsd:dateTime
+        ] ;
+        ex:belt [
+            ex:rank "white" ;
+            ex:knowledgeDate "2023-08-28T00:00:00-05:00"^^xsd:dateTime
+        ] ;
+        .
+
     jd:JD foaf:knows :Sean .
+    jd:JD foaf:knows :Kyle .
+
+    jd:JD ex:trainedWith [
+        ex:person "Sean" ;
+        ex:date "2023-10-03T19:00:00-05:00"^^xsd:dateTime ;
+    ] .
+
+    jd:JD ex:trainedWith [
+        ex:person "Joe" ;
+        ex:date "2023-10-03T19:00:00-05:00"^^xsd:dateTime ;
+    ] .
 }
 
 # Sean
